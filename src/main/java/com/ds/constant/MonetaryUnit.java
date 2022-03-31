@@ -8,7 +8,17 @@ package com.ds.constant;
 public interface MonetaryUnit {
 
     /**
-     * 价格倍数
+     * 单位/元
      */
     int YUAN = 100;
+
+    /**
+     * 单位/角
+     */
+    int JIAO = 10;
+
+    /**
+     * 单位/分
+     */
+    int FEN = 1;
 }
