@@ -3,7 +3,7 @@ package com.ds.util;
 import com.ds.constant.MonetaryUnit;
 
 /**
- * 价格转换工具
+ * 价格格式转换工具
  * @author ds
  */
 public class PriceConvertUtil {

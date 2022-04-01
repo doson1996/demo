@@ -15,7 +15,7 @@ public class PriceCalculation {
      *  计算总价
      * @param goods       购物车商品信息
      * @param sellGoods   销售商品信息
-     * @return
+     * @return totalPrice 总价
      */
     public static Integer calculateTotalPrice(Map<String, Integer> goods, Map<String, Fruit> sellGoods) {
         //总价

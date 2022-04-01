@@ -1,6 +1,5 @@
 package com.ds.entity;
 
-import com.ds.constant.MonetaryUnit;
 import com.ds.util.PriceConvertUtil;
 
 import java.util.Map;

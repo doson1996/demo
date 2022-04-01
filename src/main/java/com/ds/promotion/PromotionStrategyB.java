@@ -1,6 +1,5 @@
 package com.ds.promotion;
 
-import com.ds.constant.FruitName;
 import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Fruit;
 import com.ds.price.PriceCalculation;
