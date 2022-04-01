@@ -12,10 +12,10 @@ import java.util.Map;
 public class ShoppingCart {
 
     /**
-     * 购买商品
+     * 购物车商品信息
      * Map<String-水果名称,Integer-数量>
      */
-    private Map<String,Integer> goods;
+    private Map<String,Integer> cartGoods;
 
     /**
      * 总价（单位/分）
@@ -35,12 +35,12 @@ public class ShoppingCart {
     public ShoppingCart() {
     }
 
-    public Map<String, Integer> getGoods() {
-        return goods;
+    public Map<String, Integer> getCartGoods() {
+        return cartGoods;
     }
 
-    public void setGoods(Map<String, Integer> goods) {
-        this.goods = goods;
+    public void setCartGoods(Map<String, Integer> cartGoods) {
+        this.cartGoods = cartGoods;
     }
 
     public Integer getPayable() {
@@ -69,8 +69,8 @@ public class ShoppingCart {
 
     @Override
     public String toString() {
-        return "ShoppingCart{" +
-                "goods=" + goods +
+        return "购物车信息 {" +
+                "商品 = " + cartGoods +
                 ", 总价 = " + PriceConvertUtil.convertRMB(totalPrice) +
                 ", 应付款 = " + PriceConvertUtil.convertRMB(payable) +
                 ", 优惠金额 = " + PriceConvertUtil.convertRMB(discountedPrice) +

@@ -14,12 +14,12 @@ import java.util.Map;
 public class PromotionStrategyA extends PromotionStrategy {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
+    public Integer discount(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods) {
         Integer discountedPrice = 0;
-        for (String name : goods.keySet()) {
+        for (String name : cartGoods.keySet()) {
             if (FruitName.STRAWBERRY.equals(name)) {
-                Fruit fruit = (Fruit) sellGoods.get(FruitName.STRAWBERRY);
-                discountedPrice += fruit.getPrice() * goods.get(name) * 2;
+                Goods goods = sellGoods.get(FruitName.STRAWBERRY);
+                discountedPrice += goods.getPrice() * cartGoods.get(name) * 2;
             }
         }
 

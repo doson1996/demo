@@ -24,11 +24,11 @@ public class BuyServiceImpl implements BuyService {
         }
 
         Map<String, Goods> sellGoods = supermarket.getSellGoods();
-        Map<String, Integer> goods = shoppingCart.getGoods();
+        Map<String, Integer> cartGoods = shoppingCart.getCartGoods();
         //总价
-        Integer totalPrice = PriceCalculation.calculateTotalPrice(goods, sellGoods);
+        Integer totalPrice = PriceCalculation.calculateTotalPrice(cartGoods, sellGoods);
         //优惠金额
-        Integer discountedPrice = supermarket.getStrategy().discount(goods, sellGoods);
+        Integer discountedPrice = supermarket.getStrategy().discount(cartGoods, sellGoods);
 
         shoppingCart.setTotalPrice(totalPrice);
         shoppingCart.setPayable(totalPrice - discountedPrice);

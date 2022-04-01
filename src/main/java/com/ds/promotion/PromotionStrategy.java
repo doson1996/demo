@@ -12,10 +12,10 @@ public abstract class PromotionStrategy {
 
     /**
      * 优惠活动
-     * @param goods     购物车商品信息
+     * @param cartGoods     购物车商品信息
      * @param sellGoods 销售商品信息
      * @return 优惠金额
      */
-    public abstract Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods);
+    public abstract Integer discount(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods);
 
 }

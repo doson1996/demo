@@ -11,7 +11,7 @@ import java.util.Map;
 public class PromotionStrategyNone extends PromotionStrategy {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
+    public Integer discount(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods) {
         return 0;
     }
 

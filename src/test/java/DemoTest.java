@@ -1,5 +1,3 @@
-
-
 import com.ds.constant.FruitName;
 import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Fruit;
@@ -41,14 +39,14 @@ public class DemoTest {
         supermarket.setSellGoods(sellGoods);
         supermarket.setStrategy(new PromotionStrategyNone());
 
-        //构建购物车信息
-        Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
-        goods.put(FruitName.APPLE, 1);
-        goods.put(FruitName.STRAWBERRY, 1);
+        //构建购物车商品信息
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        cartGoods.put(FruitName.APPLE, 1);
+        cartGoods.put(FruitName.STRAWBERRY, 1);
 
         //购物车
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setGoods(goods);
+        shoppingCart.setCartGoods(cartGoods);
 
         ShoppingCart buy = buyService.buy(shoppingCart, supermarket);
         System.out.println(buy);
@@ -74,15 +72,15 @@ public class DemoTest {
         supermarket.setSellGoods(sellGoods);
         supermarket.setStrategy(new PromotionStrategyNone());
 
-        //构建购物车信息
-        Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
-        goods.put(FruitName.APPLE, 1);
-        goods.put(FruitName.STRAWBERRY, 1);
-        goods.put(FruitName.MANGO, 1);
+        //构建购物车商品信息
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        cartGoods.put(FruitName.APPLE, 1);
+        cartGoods.put(FruitName.STRAWBERRY, 1);
+        cartGoods.put(FruitName.MANGO, 1);
 
         //购物车
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setGoods(goods);
+        shoppingCart.setCartGoods(cartGoods);
 
         ShoppingCart buy = buyService.buy(shoppingCart, supermarket);
         System.out.println(buy);
@@ -108,15 +106,15 @@ public class DemoTest {
         supermarket.setSellGoods(sellGoods);
         supermarket.setStrategy(new PromotionStrategyA());
 
-        //构建购物车信息
-        Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
-        goods.put(FruitName.APPLE, 1);
-        goods.put(FruitName.STRAWBERRY, 1);
-        goods.put(FruitName.MANGO, 1);
+        //构建购物车商品信息
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        cartGoods.put(FruitName.APPLE, 1);
+        cartGoods.put(FruitName.STRAWBERRY, 1);
+        cartGoods.put(FruitName.MANGO, 1);
 
         //购物车
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setGoods(goods);
+        shoppingCart.setCartGoods(cartGoods);
 
         ShoppingCart buy = buyService.buy(shoppingCart, supermarket);
         System.out.println(buy);
@@ -142,15 +140,15 @@ public class DemoTest {
         supermarket.setSellGoods(sellGoods);
         supermarket.setStrategy(new PromotionStrategyB());
 
-        //构建购物车信息
-        Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
-        goods.put(FruitName.APPLE, 1);
-        goods.put(FruitName.STRAWBERRY, 1);
-        goods.put(FruitName.MANGO, 5);
+        //构建购物车商品信息
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        cartGoods.put(FruitName.APPLE, 1);
+        cartGoods.put(FruitName.STRAWBERRY, 1);
+        cartGoods.put(FruitName.MANGO, 5);
 
         //购物车
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setGoods(goods);
+        shoppingCart.setCartGoods(cartGoods);
 
         ShoppingCart buy = buyService.buy(shoppingCart, supermarket);
         System.out.println(buy);

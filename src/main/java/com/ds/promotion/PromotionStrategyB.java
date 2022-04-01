@@ -16,11 +16,11 @@ import java.util.Map;
 public class PromotionStrategyB extends PromotionStrategyA {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
+    public Integer discount(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods) {
         // 商品总价
-        Integer totalPrice = PriceCalculation.calculateTotalPrice(goods, sellGoods);
+        Integer totalPrice = PriceCalculation.calculateTotalPrice(cartGoods, sellGoods);
         // 优惠活动一优惠金额
-        Integer discountA = super.discount(goods, sellGoods);
+        Integer discountA = super.discount(cartGoods, sellGoods);
         // 享受满减次数
         Integer count = (totalPrice - discountA) / (100 * MonetaryUnit.YUAN);
         // 优惠活动二优惠金额
