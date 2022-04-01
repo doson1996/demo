@@ -1,6 +1,8 @@
 package com.ds.entity;
 
 import com.ds.constant.MonetaryUnit;
+import com.ds.util.PriceConvertUtil;
+
 import java.util.Map;
 
 /**
@@ -70,17 +72,10 @@ public class ShoppingCart {
     public String toString() {
         return "ShoppingCart{" +
                 "goods=" + goods +
-                ", 总价 = " + convert(totalPrice) +
-                ", 应付款 = " + convert(payable) +
-                ", 优惠金额 = " + convert(discountedPrice) +
+                ", 总价 = " + PriceConvertUtil.convertRMB(totalPrice) +
+                ", 应付款 = " + PriceConvertUtil.convertRMB(payable) +
+                ", 优惠金额 = " + PriceConvertUtil.convertRMB(discountedPrice) +
                 '}';
     }
 
-    private String convert(Integer price) {
-        String result = "￥" + (price / MonetaryUnit.YUAN) + "." ;
-        if (price % MonetaryUnit.YUAN >= 10) {
-           return result + (price % MonetaryUnit.YUAN);
-        }
-        return  result + (price % MonetaryUnit.YUAN) + "0";
-    }
 }
