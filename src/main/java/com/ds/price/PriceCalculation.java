@@ -1,6 +1,5 @@
 package com.ds.price;
 
-import com.ds.entity.Fruit;
 import com.ds.entity.Goods;
 
 import java.util.Map;

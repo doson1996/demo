@@ -1,6 +1,5 @@
 package com.ds.service.impl;
 
-import com.ds.entity.Fruit;
 import com.ds.entity.Goods;
 import com.ds.entity.ShoppingCart;
 import com.ds.entity.Supermarket;
