@@ -19,7 +19,7 @@ public class PriceCalculation {
      */
     public static Integer calculateTotalPrice(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods) {
         //总价
-        Integer totalPrice = 0;
+        int totalPrice = 0;
 
         for (String name : cartGoods.keySet()) {
             Goods goods = sellGoods.get(name);
