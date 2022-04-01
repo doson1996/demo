@@ -13,6 +13,7 @@ public class Supermarket {
 
     /**
      * 销售商品
+     * Map<String-水果名称, Fruit-对应水果>
      */
     private Map<String, Fruit> sellGoods;
 
