@@ -21,7 +21,7 @@ public class BuyServiceImpl implements BuyService {
     public ShoppingCart buy(ShoppingCart shoppingCart, Supermarket supermarket) {
         Map<String, Fruit> sellGoods = supermarket.getSellGoods();
         Map<String, Integer> goods = shoppingCart.getGoods();
-        Integer payable = 0;
+        Integer totalPrice = 0;
         Integer discountedPrice = 0;
 
         for (String name : goods.keySet()) {
@@ -30,12 +30,12 @@ public class BuyServiceImpl implements BuyService {
                 log.info("商品信息异常！");
             }
             //应付款
-            payable += fruit.getPrice() * goods.get(name);
+            totalPrice += fruit.getPrice() * goods.get(name);
 
         }
 
-        shoppingCart.setPayable(payable);
-        shoppingCart.setActualPayment(payable - discountedPrice);
+        shoppingCart.setTotalPrice(totalPrice);
+        shoppingCart.setPayable(totalPrice - discountedPrice);
         shoppingCart.setDiscountedPrice(discountedPrice);
         return shoppingCart;
     }

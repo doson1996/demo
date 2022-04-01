@@ -20,14 +20,14 @@ public class ShoppingCart {
     private Map<String,Integer> goods;
 
     /**
-     * 应付款（单位/分）
+     * 总价（单位/分）
      */
-    private Integer payable;
+    private Integer totalPrice;
 
     /**
-     * 实付款（单位/分）
+     * 应付款（单位/分）总价
      */
-    private Integer actualPayment;
+    private Integer payable;
 
     /**
      * 优惠金额（单位/分）
@@ -53,12 +53,12 @@ public class ShoppingCart {
         this.payable = payable;
     }
 
-    public Integer getActualPayment() {
-        return actualPayment;
+    public Integer getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setActualPayment(Integer actualPayment) {
-        this.actualPayment = actualPayment;
+    public void setTotalPrice(Integer totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public Integer getDiscountedPrice() {
@@ -73,8 +73,8 @@ public class ShoppingCart {
     public String toString() {
         return "ShoppingCart{" +
                 "goods=" + goods +
+                ", 总价 = " + convert(totalPrice) +
                 ", 应付款 = " + convert(payable) +
-                ", 实付款 = " + convert(actualPayment) +
                 ", 优惠金额 = " + convert(discountedPrice) +
                 '}';
     }

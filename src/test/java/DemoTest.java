@@ -31,6 +31,7 @@ public class DemoTest {
         Supermarket supermarket = new Supermarket();
         supermarket.setSellGoods(sellGoods);
 
+        //构建购物车信息
         Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
         goods.put(FruitName.APPLE, 1);
         goods.put(FruitName.STRAWBERRY, 1);
@@ -57,6 +58,7 @@ public class DemoTest {
         Supermarket supermarket = new Supermarket();
         supermarket.setSellGoods(sellGoods);
 
+        //构建购物车信息
         Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
         goods.put(FruitName.APPLE, 1);
         goods.put(FruitName.STRAWBERRY, 1);
