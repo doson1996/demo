@@ -2,6 +2,7 @@ package com.ds.promotion;
 
 import com.ds.constant.FruitName;
 import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 
 import java.util.Map;
 
@@ -13,11 +14,11 @@ import java.util.Map;
 public class PromotionStrategyA extends PromotionStrategy {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Fruit> sellGoods) {
+    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
         Integer discountedPrice = 0;
         for (String name : goods.keySet()) {
             if (FruitName.STRAWBERRY.equals(name)) {
-                Fruit fruit = sellGoods.get(FruitName.STRAWBERRY);
+                Fruit fruit = (Fruit) sellGoods.get(FruitName.STRAWBERRY);
                 discountedPrice += fruit.getPrice() * goods.get(name) * 2;
             }
         }

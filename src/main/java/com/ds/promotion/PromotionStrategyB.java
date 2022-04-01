@@ -2,6 +2,7 @@ package com.ds.promotion;
 
 import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 import com.ds.price.PriceCalculation;
 
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Map;
 public class PromotionStrategyB extends PromotionStrategyA {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Fruit> sellGoods) {
+    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
         // 商品总价
         Integer totalPrice = PriceCalculation.calculateTotalPrice(goods, sellGoods);
         // 优惠活动一优惠金额

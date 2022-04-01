@@ -1,6 +1,7 @@
 package com.ds.service.impl;
 
 import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 import com.ds.entity.ShoppingCart;
 import com.ds.entity.Supermarket;
 import com.ds.service.BuyService;
@@ -22,7 +23,7 @@ public class BuyServiceImpl implements BuyService {
             return new ShoppingCart();
         }
 
-        Map<String, Fruit> sellGoods = supermarket.getSellGoods();
+        Map<String, Goods> sellGoods = supermarket.getSellGoods();
         Map<String, Integer> goods = shoppingCart.getGoods();
         //总价
         Integer totalPrice = PriceCalculation.calculateTotalPrice(goods, sellGoods);

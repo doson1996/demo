@@ -3,6 +3,7 @@
 import com.ds.constant.FruitName;
 import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 import com.ds.entity.ShoppingCart;
 import com.ds.entity.Supermarket;
 import com.ds.promotion.PromotionStrategyA;
@@ -31,7 +32,7 @@ public class DemoTest {
         BuyService buyService = new BuyServiceImpl();
 
         //构建销售商品
-        Map<String, Fruit> sellGoods = new ConcurrentHashMap<String, Fruit>();
+        Map<String, Goods> sellGoods = new ConcurrentHashMap<>();
         sellGoods.put(FruitName.APPLE, new Fruit(FruitName.APPLE, 8 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.STRAWBERRY, new Fruit(FruitName.STRAWBERRY, 13 * MonetaryUnit.YUAN));
 
@@ -63,7 +64,7 @@ public class DemoTest {
         BuyService buyService = new BuyServiceImpl();
 
         //构建销售商品
-        Map<String, Fruit> sellGoods = new ConcurrentHashMap<String, Fruit>();
+        Map<String, Goods> sellGoods = new ConcurrentHashMap<>();
         sellGoods.put(FruitName.APPLE, new Fruit(FruitName.APPLE, 8 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.STRAWBERRY, new Fruit(FruitName.STRAWBERRY, 13 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.MANGO, new Fruit(FruitName.MANGO, 20 * MonetaryUnit.YUAN));
@@ -97,7 +98,7 @@ public class DemoTest {
         BuyService buyService = new BuyServiceImpl();
 
         //构建销售商品
-        Map<String, Fruit> sellGoods = new ConcurrentHashMap<String, Fruit>();
+        Map<String, Goods> sellGoods = new ConcurrentHashMap<>();
         sellGoods.put(FruitName.APPLE, new Fruit(FruitName.APPLE, 8 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.STRAWBERRY, new Fruit(FruitName.STRAWBERRY, 13 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.MANGO, new Fruit(FruitName.MANGO, 20 * MonetaryUnit.YUAN));
@@ -131,7 +132,7 @@ public class DemoTest {
         BuyService buyService = new BuyServiceImpl();
 
         //构建销售商品
-        Map<String, Fruit> sellGoods = new ConcurrentHashMap<String, Fruit>();
+        Map<String, Goods> sellGoods = new ConcurrentHashMap<>();
         sellGoods.put(FruitName.APPLE, new Fruit(FruitName.APPLE, 8 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.STRAWBERRY, new Fruit(FruitName.STRAWBERRY, 13 * MonetaryUnit.YUAN));
         sellGoods.put(FruitName.MANGO, new Fruit(FruitName.MANGO, 20 * MonetaryUnit.YUAN));

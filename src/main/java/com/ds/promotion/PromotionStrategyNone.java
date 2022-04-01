@@ -1,6 +1,6 @@
 package com.ds.promotion;
 
-import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 
 import java.util.Map;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 public class PromotionStrategyNone extends PromotionStrategy {
 
     @Override
-    public Integer discount(Map<String, Integer> goods, Map<String, Fruit> sellGoods) {
+    public Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods) {
         return 0;
     }
 

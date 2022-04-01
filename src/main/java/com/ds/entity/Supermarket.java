@@ -15,7 +15,7 @@ public class Supermarket {
      * 销售商品
      * Map<String-水果名称, Fruit-对应水果>
      */
-    private Map<String, Fruit> sellGoods;
+    private Map<String, Goods> sellGoods;
 
     /**
      * 促销活动
@@ -25,11 +25,11 @@ public class Supermarket {
     public Supermarket() {
     }
 
-    public Map<String, Fruit> getSellGoods() {
+    public Map<String, Goods> getSellGoods() {
         return sellGoods;
     }
 
-    public void setSellGoods(Map<String, Fruit> sellGoods) {
+    public void setSellGoods(Map<String, Goods> sellGoods) {
         this.sellGoods = sellGoods;
     }
 

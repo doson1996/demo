@@ -1,6 +1,6 @@
 package com.ds.promotion;
 
-import com.ds.entity.Fruit;
+import com.ds.entity.Goods;
 
 import java.util.Map;
 
@@ -16,6 +16,6 @@ public abstract class PromotionStrategy {
      * @param sellGoods 销售商品信息
      * @return 优惠金额
      */
-    public abstract Integer discount(Map<String, Integer> goods, Map<String, Fruit> sellGoods);
+    public abstract Integer discount(Map<String, Integer> goods, Map<String, Goods> sellGoods);
 
 }
