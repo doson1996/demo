@@ -5,6 +5,8 @@ import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Fruit;
 import com.ds.entity.ShoppingCart;
 import com.ds.entity.Supermarket;
+import com.ds.promotion.PromotionStrategyA;
+import com.ds.promotion.PromotionStrategyNone;
 import com.ds.service.BuyService;
 import com.ds.service.impl.BuyServiceImpl;
 import org.junit.Test;
@@ -30,6 +32,7 @@ public class DemoTest {
         //超市,初始化商品
         Supermarket supermarket = new Supermarket();
         supermarket.setSellGoods(sellGoods);
+        supermarket.setStrategy(new PromotionStrategyNone());
 
         //构建购物车信息
         Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
@@ -57,6 +60,36 @@ public class DemoTest {
         //超市,初始化商品
         Supermarket supermarket = new Supermarket();
         supermarket.setSellGoods(sellGoods);
+        supermarket.setStrategy(new PromotionStrategyNone());
+
+        //构建购物车信息
+        Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();
+        goods.put(FruitName.APPLE, 1);
+        goods.put(FruitName.STRAWBERRY, 1);
+        goods.put(FruitName.MANGO, 1);
+
+        //购物车
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setGoods(goods);
+
+        ShoppingCart buy = buyService.buy(shoppingCart, supermarket);
+        System.out.println(buy);
+    }
+
+    @Test
+    public void test3() {
+        BuyService buyService = new BuyServiceImpl();
+
+        //构建销售商品
+        Map<String, Fruit> sellGoods = new ConcurrentHashMap<String, Fruit>();
+        sellGoods.put(FruitName.APPLE, new Fruit(FruitName.APPLE, 8 * MonetaryUnit.YUAN));
+        sellGoods.put(FruitName.STRAWBERRY, new Fruit(FruitName.STRAWBERRY, 13 * MonetaryUnit.YUAN));
+        sellGoods.put(FruitName.MANGO, new Fruit(FruitName.MANGO, 20 * MonetaryUnit.YUAN));
+
+        //超市,初始化商品
+        Supermarket supermarket = new Supermarket();
+        supermarket.setSellGoods(sellGoods);
+        supermarket.setStrategy(new PromotionStrategyA());
 
         //构建购物车信息
         Map<String, Integer> goods = new ConcurrentHashMap<String, Integer>();

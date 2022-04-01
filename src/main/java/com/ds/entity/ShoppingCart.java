@@ -1,9 +1,6 @@
 package com.ds.entity;
 
-
-
 import com.ds.constant.MonetaryUnit;
-
 import java.util.Map;
 
 /**

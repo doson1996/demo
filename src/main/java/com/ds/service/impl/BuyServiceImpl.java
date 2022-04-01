@@ -4,10 +4,10 @@ import com.ds.entity.Fruit;
 import com.ds.entity.ShoppingCart;
 import com.ds.entity.Supermarket;
 import com.ds.service.BuyService;
+import com.ds.price.PriceCalculation;
 
 import java.util.Map;
 import java.util.Objects;
-import java.util.logging.Logger;
 
 /**
  * @author ds
@@ -15,28 +15,24 @@ import java.util.logging.Logger;
  */
 public class BuyServiceImpl implements BuyService {
 
-     Logger log = Logger.getGlobal();
-
     @Override
     public ShoppingCart buy(ShoppingCart shoppingCart, Supermarket supermarket) {
+        //参数校验
+        if (Objects.isNull(shoppingCart) || Objects.isNull(supermarket)) {
+            return new ShoppingCart();
+        }
+
         Map<String, Fruit> sellGoods = supermarket.getSellGoods();
         Map<String, Integer> goods = shoppingCart.getGoods();
-        Integer totalPrice = 0;
-        Integer discountedPrice = 0;
-
-        for (String name : goods.keySet()) {
-            Fruit fruit = sellGoods.get(name);
-            if (Objects.isNull(fruit)) {
-                log.info("商品信息异常！");
-            }
-            //应付款
-            totalPrice += fruit.getPrice() * goods.get(name);
-
-        }
+        //总价
+        Integer totalPrice = PriceCalculation.calculateTotalPrice(goods, sellGoods);
+        //优惠金额
+        Integer discountedPrice = supermarket.getStrategy().discount(goods, sellGoods);
 
         shoppingCart.setTotalPrice(totalPrice);
         shoppingCart.setPayable(totalPrice - discountedPrice);
         shoppingCart.setDiscountedPrice(discountedPrice);
+
         return shoppingCart;
     }
 }

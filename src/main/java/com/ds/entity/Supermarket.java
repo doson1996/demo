@@ -1,5 +1,6 @@
 package com.ds.entity;
 
+import com.ds.promotion.PromotionStrategy;
 import java.util.Map;
 
 /**
@@ -15,6 +16,11 @@ public class Supermarket {
      */
     private Map<String, Fruit> sellGoods;
 
+    /**
+     * 促销活动
+     */
+    private PromotionStrategy strategy;
+
     public Supermarket() {
     }
 
@@ -24,5 +30,13 @@ public class Supermarket {
 
     public void setSellGoods(Map<String, Fruit> sellGoods) {
         this.sellGoods = sellGoods;
+    }
+
+    public PromotionStrategy getStrategy() {
+        return strategy;
+    }
+
+    public void setStrategy(PromotionStrategy strategy) {
+        this.strategy = strategy;
     }
 }

@@ -1,7 +1,7 @@
 package com.ds.constant;
 
 /**
- * 项目常量
+ * 货币单位对应倍数
  * @author ds
  * @date 2022/4/1 0:57
  */
