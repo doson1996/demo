@@ -1,7 +1,7 @@
 package com.ds.constant;
 
 /**
- * 水果名称常量
+ * 水果名称
  * @author ds
  * @date 2022/4/1 0:05
  */

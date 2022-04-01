@@ -24,7 +24,7 @@ public class ShoppingCart {
     private Integer totalPrice;
 
     /**
-     * 应付款（单位/分）总价
+     * 应付款（单位/分）
      */
     private Integer payable;
 
