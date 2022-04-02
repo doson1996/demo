@@ -21,7 +21,7 @@ public class PromotionStrategyB extends PromotionStrategyA {
         // 优惠活动一优惠金额
         Integer discountA = super.discount(cartGoods, sellGoods);
         // 享受满减次数
-        Integer count = (totalPrice - discountA) / (100 * MonetaryUnit.YUAN);
+        int count = (totalPrice - discountA) / (100 * MonetaryUnit.YUAN);
         // 优惠活动二优惠金额
         Integer discountB = count * (10 * MonetaryUnit.YUAN);
         return discountA + discountB ;

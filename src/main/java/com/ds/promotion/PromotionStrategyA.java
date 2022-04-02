@@ -14,7 +14,7 @@ public class PromotionStrategyA extends PromotionStrategy {
 
     @Override
     public Integer discount(Map<String, Integer> cartGoods, Map<String, Goods> sellGoods) {
-        Integer discountedPrice = 0;
+        int discountedPrice = 0;
         for (String name : cartGoods.keySet()) {
             if (FruitName.STRAWBERRY.equals(name)) {
                 Goods goods = sellGoods.get(FruitName.STRAWBERRY);
