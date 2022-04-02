@@ -40,7 +40,7 @@ public class DemoTest {
         supermarket.setStrategy(new PromotionStrategyNone());
 
         //构建购物车商品信息
-        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<>();
         cartGoods.put(FruitName.APPLE, 1);
         cartGoods.put(FruitName.STRAWBERRY, 1);
 
@@ -73,7 +73,7 @@ public class DemoTest {
         supermarket.setStrategy(new PromotionStrategyNone());
 
         //构建购物车商品信息
-        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<>();
         cartGoods.put(FruitName.APPLE, 1);
         cartGoods.put(FruitName.STRAWBERRY, 1);
         cartGoods.put(FruitName.MANGO, 1);
@@ -107,7 +107,7 @@ public class DemoTest {
         supermarket.setStrategy(new PromotionStrategyA());
 
         //构建购物车商品信息
-        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<>();
         cartGoods.put(FruitName.APPLE, 1);
         cartGoods.put(FruitName.STRAWBERRY, 1);
         cartGoods.put(FruitName.MANGO, 1);
@@ -141,7 +141,7 @@ public class DemoTest {
         supermarket.setStrategy(new PromotionStrategyB());
 
         //构建购物车商品信息
-        Map<String, Integer> cartGoods = new ConcurrentHashMap<String, Integer>();
+        Map<String, Integer> cartGoods = new ConcurrentHashMap<>();
         cartGoods.put(FruitName.APPLE, 1);
         cartGoods.put(FruitName.STRAWBERRY, 1);
         cartGoods.put(FruitName.MANGO, 5);

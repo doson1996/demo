@@ -1,4 +1,4 @@
-package com.ds.price;
+package com.ds.handler;
 
 import com.ds.entity.Goods;
 

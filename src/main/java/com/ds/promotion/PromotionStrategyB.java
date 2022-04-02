@@ -2,7 +2,7 @@ package com.ds.promotion;
 
 import com.ds.constant.MonetaryUnit;
 import com.ds.entity.Goods;
-import com.ds.price.PriceCalculation;
+import com.ds.handler.PriceCalculation;
 
 import java.util.Map;
 
